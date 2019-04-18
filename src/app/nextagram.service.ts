@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const getNameUrl = 'https://tranquil-beach-87956.herokuapp.com/api/v1/users'
+const getNameUrl = 'https://insta.nextacademy.com/api/v1/users'
+const getImage = 'https://insta.nextacademy.com/api/v1/images?userId'
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,6 @@ export class NextagramService {
   }
 
   getSpecificNames(id) {
-    return this.http.get(getNameUrl + `/${id}`)
+    return this.http.get(getImage + `/${id}`)
   }
 }

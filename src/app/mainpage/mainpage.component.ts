@@ -8,7 +8,7 @@ import { NextagramService } from '../nextagram.service'
 })
 export class MainpageComponent implements OnInit {
 
-  ids = []
+  ids
 
   constructor(private nextagramService: NextagramService) { }
 
@@ -18,7 +18,8 @@ export class MainpageComponent implements OnInit {
 
   getNames() {
     this.nextagramService.getNames().subscribe(response => {
-      this.ids = response.results.map(result => result.id)
+      this.ids = response
+      console.log(this.ids)
     })
   }
 
