@@ -1,4 +1,18 @@
-<h4>Profile</h4>
-<div id="image" *ngFor="let id of image">
-  <img width=100px, height=100px src="{{ id }}">
+<div id="top-page">
+  <h4>Profile</h4>
+  <a class='nav-button' routerLink="/editProfile">Edit Profile</a>
 </div>
+<!-- <div *ngIf="images"> -->
+<div id="userimage" *ngFor="let id of images">
+  <div class="images">
+    <img width=100px, height=100px src="{{ id }}">
+  </div>
+  <div class="buttons">
+    <input type="button" routerLink="/comment" value="Comment" />
+    <!-- <input type="submit" value="Like" /> -->
+    <input type="button" (click)="clickCount()" value="Like" />
+    <label id="likeCount">0</label>
+  </div>
+</div>
+
+<!-- </div> -->

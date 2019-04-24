@@ -1,5 +1,8 @@
-<h4>Users</h4>
-<div *ngFor="let id of ids">
-  <a routerLink="/users/{{ id.id }}">{{ id.username }}</a><br>
-  <img width=100px, height=100px src="{{ id.profileImage }}">
+<!-- <h4>Users</h4> -->
+
+<div id="content">
+  <div class="userlist" *ngFor="let id of ids">
+    <img width=100px, height=100px src="{{ id.profileImage }}"><br>
+    <a routerLink="/users/{{ id.id }}">{{ id.username }}</a>
+  </div>
 </div>

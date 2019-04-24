@@ -9,17 +9,23 @@ import { NextagramService } from '../nextagram.service';
 })
 export class UserProfileComponent implements OnInit {
 
-  image
+  images
+  count = 0
 
   constructor(private route: ActivatedRoute, private nextagramService: NextagramService) { }
 
   ngOnInit() {
     this.nextagramService.getSpecificNames(
       this.route.snapshot.params.id).subscribe(response => {
-        this.image = response
-        console.log("image response" + this.image)
+        this.images = response
       })
   }
 
+  countString
+  clickCount() {
+    this.count++
+    console.log(this.count)
+    document.getElementById('likeCount').innerText = this.count.toString()
+  }
 
 }

@@ -19,7 +19,6 @@ export class MainpageComponent implements OnInit {
   getNames() {
     this.nextagramService.getNames().subscribe(response => {
       this.ids = response
-      console.log(this.ids)
     })
   }
 

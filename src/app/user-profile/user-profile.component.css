@@ -1,0 +1,18 @@
+#userimage{
+  display: inline-block;
+  margin-left: 10px;
+
+  width: 150px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.images{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttons{
+  text-align: center;
+
+}

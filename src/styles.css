@@ -1,4 +1,19 @@
-#image{
-  flex-direction: column;
-  justify-content: space-between;
+#top-nav{
+  height: 60px;
+  background: palevioletred;
+}
+
+#top-nav div{
+  width: 50%;
+  display: inline-block;
+  align-items: center;
+}
+
+#top-nav ul{
+  text-align: right;
+}
+
+#top-nav ul li{
+  padding-left: 10px;
+  display: inline-block;
 }
